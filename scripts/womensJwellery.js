@@ -324,16 +324,5 @@ const womensJwellery = [
     strPrice: "$62,000.00",
     price: "$11,999.99",
     discount: "Save 81%",
-  }, {
-    id: 1,
-    img1: "",
-    avatar: "",
-    img2: "",
-    img3: "",
-    manufacturer: "",
-    title: "",
-    strPrice: "",
-    price: "",
-    discount: "",
   },
 ];
