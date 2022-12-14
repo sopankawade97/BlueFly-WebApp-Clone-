@@ -1,46 +1,10 @@
 import indexData from "../data/index.json" assert { type: "json" };
-console.log(indexData);
+import nav from "../components/navbar.js";
+import footer from "../components/footer.js";
+// console.log(indexData);
 
-const textslider = [
-  {
-    id: 0,
-    text: "WELCOME TO BLUEFLY: Luxury brands at discounted prices",
-  },
-  {
-    id: 1,
-    text: "FREE SHIPPING On Order Over $999",
-  },
-];
-
-// text Slider
-
-const renderTextslider = () => {
-  let container = document.getElementById("welcome_textslider");
-  let i = 0;
-  container.style.width = `${textslider.length * 100}%`;
-  textslider.map((elem) => {
-    let p = document.createElement("p");
-    p.innerText = elem.text;
-    container.append(p);
-  });
-
-  const slideShow = () => {
-    if (textslider.length > i) {
-      container.style.transform = `translateX(${
-        -i * (100 / textslider.length)
-      }%)`;
-      i++;
-    } else {
-      i = 0;
-    }
-  };
-
-  setInterval(() => {
-    slideShow();
-  }, 2500);
-};
-
-renderTextslider();
+document.getElementById("render_navbar").innerHTML = nav();
+document.getElementById("render_footer").innerHTML = footer()
 
 // threeimages
 
@@ -148,9 +112,12 @@ function renderElementTrendandArrivals(trendingNow, el) {
 const renderLeftRightClickSlider = () => {
   let container = document.getElementById("renderLeftRightImages");
 
-  indexData.slideLeftRightImages.map((el) => {
+  indexData.slideLeftRightImages.map((el, index, array ) => {
     // console.log(el);
     let main_div = document.createElement("div");
+    main_div.addEventListener("click", ()=> {
+      openThisModal(el, index, array);
+    })
     let img_div = document.createElement("div");
     let main_img = document.createElement("img");
     main_img.classList.add("main_img");
@@ -169,6 +136,24 @@ const renderLeftRightClickSlider = () => {
     main_div.append(img_div, img2, p_div);
     container.append(main_div);
   });
+
+  function openThisModal(el, index, array){
+    let body_blur = document.querySelector("body");
+    body_blur.style.overflow = "hidden";
+    // body_blur.style.opacity = "0.5";
+    // body_blur.classList.add("body_blur")
+    let disable_body1 = document.getElementById("disable_body_022");
+    disable_body1.classList.add("body_blur");
+    console.dir(disable_body1);
+    let disable_body = document.getElementById("disable_body_02");
+    disable_body.style.display = "block"
+    // console.log(array);
+    let div = document.createElement("div");
+    let img = document.createElement("img");
+    img.src = indexData.slideLeftRightImages[index].imgUrl
+    div.append(img);
+    disable_body.append(div);
+  }
 
   let clickCalc = 0;
   function reRender() {
@@ -196,24 +181,3 @@ const renderLeftRightClickSlider = () => {
 
 renderLeftRightClickSlider();
 
-//  render Footer three Image.
-
-const renderFooterImage = () => {
-  console.log(indexData.bottomThreeImages);
-  let footerImgContainer = document.getElementById("footer_three_img");
-  indexData.bottomThreeImages.map((el) => {
-    let div = document.createElement("div");
-    let img = document.createElement("img");
-    img.src = el.imgUrl;
-    let h4 = document.createElement("h4");
-    h4.innerText = el.title;
-    let p = document.createElement("p");
-    p.innerText = el.desc;
-    let btn = document.createElement("button");
-    btn.textContent = el.btnText;
-    div.append(img, h4, p, btn);
-    footerImgContainer.append(div)
-  });
-};
-
-renderFooterImage();
