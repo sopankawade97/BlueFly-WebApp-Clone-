@@ -1,10 +1,12 @@
 import indexData from "../data/index.json" assert { type: "json" };
+// import productData from "../data/productData.json" assert { type: "json" };
+// console.log("productData", productData);
 import nav from "../components/navbar.js";
 import footer from "../components/footer.js";
 // console.log(indexData);
 
 document.getElementById("render_navbar").innerHTML = nav();
-document.getElementById("render_footer").innerHTML = footer()
+document.getElementById("render_footer").innerHTML = footer();
 
 // threeimages
 
@@ -112,12 +114,12 @@ function renderElementTrendandArrivals(trendingNow, el) {
 const renderLeftRightClickSlider = () => {
   let container = document.getElementById("renderLeftRightImages");
 
-  indexData.slideLeftRightImages.map((el, index, array ) => {
+  indexData.slideLeftRightImages.map((el, index, array) => {
     // console.log(el);
     let main_div = document.createElement("div");
-    main_div.addEventListener("click", ()=> {
+    main_div.addEventListener("click", () => {
       openThisModal(el, index, array);
-    })
+    });
     let img_div = document.createElement("div");
     let main_img = document.createElement("img");
     main_img.classList.add("main_img");
@@ -126,7 +128,6 @@ const renderLeftRightClickSlider = () => {
     img2.classList.add("small_logo_img");
     img2.src =
       "https://media.tagembed.com/post/46588/57802/87415/profile/87415.jpg";
-    img2.classList.add("small_logo_img");
     let p_div = document.createElement("div");
     p_div.classList.add("p_div");
     let p = document.createElement("p");
@@ -137,22 +138,79 @@ const renderLeftRightClickSlider = () => {
     container.append(main_div);
   });
 
-  function openThisModal(el, index, array){
-    let body_blur = document.querySelector("body");
-    body_blur.style.overflow = "hidden";
-    // body_blur.style.opacity = "0.5";
-    // body_blur.classList.add("body_blur")
+  function openThisModal(el, index, array) {
+    // let body_blur = document.querySelector("body");
+    // body_blur.style.overflow = "hidden";
     let disable_body1 = document.getElementById("disable_body_022");
-    disable_body1.classList.add("body_blur");
-    console.dir(disable_body1);
+    disable_body1.style.display = "block";
     let disable_body = document.getElementById("disable_body_02");
-    disable_body.style.display = "block"
-    // console.log(array);
+    disable_body.style.display = "block";
+    disable_body1.addEventListener("click", () => {
+      disable_body1.style.display = "none";
+      disable_body.style.display = "none";
+      document.getElementById("render_popup").innerHTML = "";
+    });
+    let close_popup = document.getElementById("close_popup");
+    close_popup.addEventListener("click", () => {
+      document.getElementById("render_popup").innerHTML = "";
+      disable_body1.style.display = "none";
+      disable_body.style.display = "none";
+    });
+
+    renderMidPopup(index, array);
+
+    document.getElementById("left").addEventListener("click", () => {
+      if (index > 0) {
+        document.getElementById("render_popup").innerHTML = "";
+        index--;
+        document.getElementById("right").style.color = "white";
+        renderMidPopup(index, array);
+      } else if (index === 0) {
+        document.getElementById("left").style.color = "rgb(194, 188, 188)";
+      }
+    });
+    document.getElementById("right").addEventListener("click", () => {
+      if (index < array.length - 1) {
+        document.getElementById("render_popup").innerHTML = "";
+        index++;
+        document.getElementById("left").style.color = "white";
+        renderMidPopup(index, array);
+      } else if (index === array.length - 1) {
+        document.getElementById("right").style.color = "rgb(194, 188, 188)";
+      }
+    });
+  }
+
+  function renderMidPopup(index, array) {
+    let render_popup = document.getElementById("render_popup");
     let div = document.createElement("div");
+    let img_div = document.createElement("div");
+    img_div.classList.add("img_div");
+    let desc_div = document.createElement("div");
+    desc_div.classList.add("desc_div");
     let img = document.createElement("img");
-    img.src = indexData.slideLeftRightImages[index].imgUrl
-    div.append(img);
-    disable_body.append(div);
+    img.src = array[index].imgUrl;
+    img_div.append(img);
+    let img2 = document.createElement("img");
+    img2.src =
+      "https://media.tagembed.com/post/46588/57802/87415/profile/87415.jpg";
+    img2.classList.add("small_logo_img2");
+    let left_top = document.createElement("div");
+    left_top.classList.add("left_top");
+    let pT = document.createElement("p");
+    pT.classList.add("pT");
+    let p1 = document.createElement("p");
+    p1.innerText = "BLUEFLY";
+    let p2 = document.createElement("p");
+    p2.innerText = "@bluefly";
+    pT.append(p1, p2);
+    left_top.append(img2, pT);
+    let desc = document.createElement("p");
+    desc.textContent = array[index].desc;
+    desc.className = "description";
+    desc_div.append(left_top, desc);
+    div.append(img_div, desc_div);
+    render_popup.append(div);
   }
 
   let clickCalc = 0;
@@ -180,4 +238,3 @@ const renderLeftRightClickSlider = () => {
 };
 
 renderLeftRightClickSlider();
-
