@@ -1,6 +1,4 @@
 import indexData from "../data/index.json" assert { type: "json" };
-// import productData from "../data/productData.json" assert { type: "json" };
-// console.log("productData", productData);
 import nav from "../components/navbar.js";
 import footer from "../components/footer.js";
 // console.log(indexData);

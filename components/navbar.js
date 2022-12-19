@@ -52,7 +52,7 @@ function nav() {
                         <p>Up to 80% off</p>
                       </div>
                       <div class="cloth_main2">
-                        <a href="#"><h3>WOMEN'S CLOTHING</h3></a>
+                        <a href="womensClothing.html"><h3>WOMEN'S CLOTHING</h3></a>
                         <ul>
                           <li><a>Coats & Jackets</a></li>
                           <li><a>Dresses</a></li>
@@ -69,7 +69,7 @@ function nav() {
                         </ul>
                       </div>
                       <div class="cloth_main3">
-                        <a href="#"><h3>MEN'S CLOTHING</h3></a>
+                        <a href="mensClothing.html"><h3>MEN'S CLOTHING</h3></a>
                         <ul>
                           <li><a>Activewear</a></li>
                           <li><a>Causal Button-Down Shirts</a></li>
@@ -96,7 +96,7 @@ function nav() {
                   <div class="hover_div">
                     <div class="shoes_main">
                       <div class="shoes_main1">
-                        <a href=""><h3>WOMEN's SHOES</h3></a>
+                        <a href="womensShoes.html"><h3>WOMEN's SHOES</h3></a>
                         <ul>
                           <li><a href="">Shop All</a></li>
                           <li><a href="">Boots</a></li>
@@ -112,7 +112,7 @@ function nav() {
                         </ul>
                       </div>
                       <div class="shoes_main2">
-                        <a href=""><h3>WOMEN's DESIGNERS</h3></a>
+                        <a href="womensShoes.html"><h3>WOMEN's DESIGNERS</h3></a>
                         <ul>
                           <li><a href="">Alexander McQueen</a></li>
                           <li><a href="">Balenciago</a></li>
@@ -131,7 +131,7 @@ function nav() {
                         </ul>
                       </div>
                       <div class="shoes_main3">
-                        <a href=""><h3>MEN's SHOES</h3></a>
+                        <a href="mensShoes.html"><h3>MEN's SHOES</h3></a>
                         <ul>
                           <li><a href="">Shol All</a></li>
                           <li><a href="">Boots</a></li>
@@ -144,7 +144,7 @@ function nav() {
                         </ul>
                       </div>
                       <div class="shoes_main4">
-                        <a href=""><h3>MEN's DESIGNERS</h3></a>
+                        <a href="mensShoes.html"><h3>MEN's DESIGNERS</h3></a>
                         <ul>
                           <li><a href="">Alexander McQueen</a></li>
                           <li><a href="">Balenciago</a></li>
@@ -186,7 +186,7 @@ function nav() {
                         <p>UP TO 60% OFF</p>
                       </div>
                       <div class="handbags_main1">
-                        <a href=""><h3>ALL HANDBAGS</h3></a>
+                        <a href="womensHandbags.html"><h3>ALL HANDBAGS</h3></a>
                         <ul>
                           <li><a href="">Shop All</a></li>
                           <li><a href="">Backpacks</a></li>
@@ -201,7 +201,7 @@ function nav() {
                         </ul>
                       </div>
                       <div class="handbags_main2">
-                        <a href=""><h3>TOP DESIGNERS</h3></a>
+                        <a href="womensHandbags.html"><h3>TOP DESIGNERS</h3></a>
                         <ul>
                           <li><a href="">Balenciaga</a></li>
                           <li><a href="">Bottega Veneta</a></li>
@@ -217,7 +217,7 @@ function nav() {
                         </ul>
                       </div>
                       <div class="handbags_main3">
-                        <a href=""><h3>PRE-OWNED</h3></a>
+                        <a href="womensPreOwned.html"><h3>PRE-OWNED</h3></a>
                         <ul>
                           <li><a href="">Shop All</a></li>
                           <li><a href="">Bucket Bags</a></li>
@@ -232,7 +232,7 @@ function nav() {
                         </ul>
                       </div>
                       <div class="handbags_main4">
-                        <a href=""><h3>ACCESSORIES</h3></a>
+                        <a href="womensAccessories.html"><h3>ACCESSORIES</h3></a>
                         <ul>
                           <li><a href="">Shop All</a></li>
                           <li>
@@ -263,7 +263,7 @@ function nav() {
                         <p>Up to 64% off</p>
                       </div>
                       <div class="design_main2">
-                        <a href=""><h3>ACCESSORIES</h3></a>
+                        <a href="womensAccessories.html"><h3>ACCESSORIES</h3></a>
                         <ul>
                           <li><a href="">Alexander McQueen</a></li>
                           <li><a href="">Balenciaga</a></li>
@@ -310,7 +310,7 @@ function nav() {
                         <p>Up to 80% off</p>
                       </div>
                       <div class="sunglasses_main2">
-                        <a href=""><h3>WOMEN'S SUNGLASSES</h3></a>
+                        <a href="womensSunglasses.html"><h3>WOMEN'S SUNGLASSES</h3></a>
                         <ul>
                           <li><a href="">Shop All</a></li>
                           <li><a href="">Balenciaga</a></li>
@@ -327,7 +327,7 @@ function nav() {
                         </ul>
                       </div>
                       <div class="sunglasses_main3">
-                        <a href=""><h3>MEN'S SUNGLASSES</h3></a>
+                        <a href="mensSunglasses.html"><h3>MEN'S SUNGLASSES</h3></a>
                         <ul>
                           <li><a href="">Shop All</a></li>
                           <li><a href="">Burberry</a></li>
@@ -359,7 +359,7 @@ function nav() {
                         <p>Up to 80% off</p>
                       </div>
                       <div class="jewelry_main2">
-                        <a href=""><h3>JEWELRY</h3></a>
+                        <a href="womensJwellery.html"><h3>JEWELRY</h3></a>
                         <ul>
                           <li><a href="">Shop All</a></li>
                           <li><a href="">Bracelets</a></li>
@@ -372,7 +372,7 @@ function nav() {
                         </ul>
                       </div>
                       <div class="jewelry_main3">
-                        <a href=""><h3>FEATURED DESIGNER WATHCES</h3></a>
+                        <a href="watches.html"><h3>FEATURED DESIGNER WATHCES</h3></a>
                         <div class="jewelry_main4">
                           <div>
                             <ul>
@@ -448,13 +448,13 @@ function nav() {
                         </ul>
                       </div>
                       <div class="beauty_main2">
-                        <a href=""><h3>SKINCARE</h3></a>
+                        <a href=".pages/skincare.html"><h3>SKINCARE</h3></a>
                         <ul>
                           <li><a href="">Shop All</a></li>
                         </ul>
                       </div>
                       <div class="beauty_main3">
-                        <a href=""><h3>HAIRCARE</h3></a>
+                        <a href=".pages/haircare.html"><h3>HAIRCARE</h3></a>
                         <ul>
                           <li><a href="">Shop All</a></li>
                         </ul>
